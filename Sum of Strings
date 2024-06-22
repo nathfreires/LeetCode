@@ -1,0 +1,17 @@
+def sum_of_number_strings(nums):
+    # initialize the sum value
+    sum = 0
+
+    # go through each value in a loop
+    for num in nums:
+        # change each string into an integer
+        num = int(num)
+
+        # add each number to the sum value
+        sum += num
+        
+    return sum 
+
+nums = ["10", "20", "30"]
+sum = sum_of_number_strings(nums)
+print(sum)
