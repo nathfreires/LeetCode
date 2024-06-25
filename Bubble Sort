@@ -1,0 +1,31 @@
+my_array = [7, 3, 9, 12, 11] #Here, we initialize an array my_array with some integers
+
+n = len(my_array) n stores the length of the array my_array, which in this case is 5
+
+for i in range(n-1): 
+    swapped = False
+    for j in range(n-i-1):
+        if my_array[j] > my_array[j+1]:
+            my_array[j], my_array[j+1] = my_array[j+1], my_array[j]
+            swapped = True
+    if not swapped:
+        break
+#This section of the code implements the bubble sort algorithm to sort the elements of my_array in ascending order. **Outer loop (for i in range(n-1)):** 
+This loop controls the number of passes made over the array.
+Since a sorted array requires at most n-1passes to ensure all elements are in the correct position,range(n-1)iterates from 0 ton-2`. 
+swapped flag: This boolean variable is used to optimize the bubble sort. If during a pass through the array no elements were swapped (indicating the array is already sorted), 
+the algorithm can terminate early.
+
+Inner loop (for j in range(n-i-1)): This loop iterates over the array from the first element to the (n-i-1)th element of the unsorted portion of the array. In each iteration, it compares adjacent elements (my_array[j] and my_array[j+1]). If they are out of order (i.e., my_array[j] > my_array[j+1]), it swaps them.
+
+Swapping: The swapping is done using a tuple assignment in Python: my_array[j], my_array[j+1] = my_array[j+1], my_array[j].
+This efficiently swaps the values of my_array[j] and my_array[j+1] without needing a temporary variable.
+
+Early termination: If no swaps were made during a pass through the array (if not swapped:), 
+the outer loop (for i in range(n-1):) breaks early, as the array is already sorted.
+python
+
+print("Sorted array:", my_array) 
+ 
+ 
+ 
