@@ -1,0 +1,21 @@
+#Q4
+#moves all the even integers at the beginning of the list followed by all the odd integers. The function returns any list that satisfies this condition.
+
+
+def sort_array_by_parity(nums):
+  even = []
+  odd = []
+  for i in nums:
+    if i%2 == 0:
+      even.append(i)
+    else:
+      odd.append(i)
+
+  return even + odd
+
+
+# if nums[back] % 2 == 0
+nums = [3,1,2,4]
+nums2 = [0]
+print(sort_array_by_parity(nums))
+print(sort_array_by_parity(nums2))
